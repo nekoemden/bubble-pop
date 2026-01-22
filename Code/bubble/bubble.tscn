@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://lxljfgfynsd"]
+
+[ext_resource type="Texture2D" uid="uid://brsy70u843wyn" path="res://Textures/bubble.png" id="1_aji7b"]
+[ext_resource type="Script" uid="uid://tmjrx1toojrr" path="res://bubble/bubble.gd" id="1_s8ch0"]
+
+[node name="Bubble" type="Node2D"]
+script = ExtResource("1_s8ch0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Bubble" type="Sprite2D" parent="."]
+position = Vector2(-4, -8)
+texture = ExtResource("1_aji7b")

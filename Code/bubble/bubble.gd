@@ -1,18 +1,21 @@
-extends Node2D
+extends Area2D
 class_name Bubble
-
-# Vars = Nouns
-var is_tall: bool = false 
-var my_age: int = 52 #Years.
-var my_weight: float = 5.673 #kg
-var my_name: String = "Kyle Rhone"
 
 var speed: float = -112 # px/ sec.
 
-
-func _ready() -> void:
-	pass # Replace with function body.
-
+func _reandy() -> void:
+	input_event.connect(on_clicked)
 
 func _process(delta: float) -> void:
 	position.y += speed * delta 
+
+func on_clicked(_viewport, event, _shape):
+	print("hi")
+	if event is InputEventMouseButton:
+		print("A button was clicked")
+	if event.button_index == MOUSE_BUTTON_LEFT:
+		print("It's the Left Button!")
+	if event.pressed:
+		print("Mouse down.")
+	else:
+		print("Mouse up.")

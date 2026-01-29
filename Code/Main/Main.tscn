@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cd5nxssueqosr"]
+[gd_scene load_steps=5 format=3 uid="uid://cd5nxssueqosr"]
 
 [ext_resource type="Script" uid="uid://br5ickikatj6u" path="res://Main/main.gd" id="1_lxy7q"]
 [ext_resource type="AudioStream" uid="uid://balcbhw5gj1bf" path="res://Sfx/pop_03.wav" id="2_83ytx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83ytx"]
+bg_color = Color(0.71145827, 0.5830437, 0.2694589, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_amygn"]
+font_size = 37
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lxy7q")
@@ -11,3 +17,23 @@ autostart = true
 
 [node name="Sfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_83ytx")
+
+[node name="Scoreboard" type="PanelContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.284
+anchor_top = 0.029000001
+anchor_right = 0.58100003
+anchor_bottom = 0.16700001
+offset_left = -327.168
+offset_top = -14.792
+offset_right = 478.688
+offset_bottom = 1.7839966
+theme_override_styles/panel = SubResource("StyleBoxFlat_83ytx")
+
+[node name="ScoreUI" type="Label" parent="Scoreboard"]
+modulate = Color(1, 0.089999974, 0.089999974, 0.7372549)
+layout_mode = 2
+text = "1234567890"
+label_settings = SubResource("LabelSettings_amygn")
+horizontal_alignment = 1
+vertical_alignment = 1
